@@ -1,0 +1,36 @@
+body{
+
+font-family: Arial, Helvetica, sans-serif;
+}
+	header
+{
+	width: 1270px;
+	overflow: hidden;
+	height: 55px;
+	color: white;
+	background-color:#162955;
+	padding-left: 10px;
+	padding-top: 10px;
+
+}
+h1
+{
+	color:#162955; 
+	text-align:center;
+	padding-bottom: 15px;
+
+}
+
+footer
+{
+	width: 1270px;
+	overflow: hidden;
+	height: 75px;
+	color: white;
+	background-color:#162955;
+	position:relative;
+	top: 50px;
+	text-align: right;
+	padding-top: 15px;
+}
+
