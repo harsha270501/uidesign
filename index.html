@@ -55,20 +55,67 @@
 			left:690px;
 			text-align: center;
 		}
+div.dropbtn {
+	color: white;
+	padding: none;
+	font-size: 16px;
+	border: none;
+	cursor:pointer;
+  }
+  
+  .dropdown {
+	position: initial;
+	display: inline-block;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  .dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+	background-color: #072F5F;
+	border-style: "color: #072F5F";
+  }
 	</style>
 </head>
 <body>
 	<h1>PROVENANCE  DATA</h1>
 <header>
-	
 
-		<i class='fas fa-bars' style='font-size:38px;color:white'></i>
+	<div class="dropdown">
+		<button class="dropbtn" style="background-color: #072F5F; border-color: #072F5F;"><i class='fas fa-bars' style='font-size:38px;color:white'></i></button>
+			<div class="dropdown-content">
+			<a href="#">Profile</a>
+			<a href="#">Activity</a>
+			<a href="#">Log Out</a>
+		</div>
+	</div>
+
+	<i class='fas fa-search' style='font-size: 38px; color:white;position:relative;margin-left:93%'></i>
+
 		
-		<i class='fas fa-search' style='font-size: 38px; color:white;position:relative;left:1190px'></i>
 
-	
 </header>
 <div class="filemenu">
+
 	<div class="file1">
 		<i class='fa fa-file-image-o' style='font-size:50px;color:white;'></i><br><br>
 		<i class='fa fa-ellipsis-v' style='font-size:35px;color:white;position: relative;margin-top: 10px;margin-left: 90px'></i>
