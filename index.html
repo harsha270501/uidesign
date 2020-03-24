@@ -5,6 +5,7 @@
 	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 	<link rel="stylesheet" type="text/css" href="basicstyle.css">
 	<link rel="stylesheet" type="text/css" href="menustyle.css">
+	<link rel="stylesheet" type="text/css" href="menudrop.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="file.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +15,10 @@
 
 </head>
 <body>
-	<h1>PROVENANCE  DATA</h1>
+	<div class="titlebox">
+		<h1>PROVENANCE  DATA</h1>
+		<button class="Acctype" onclick="changeacc()"><div id="acc">Ethereum</div></button>
+	</div>
 <header>
 
 	<div class="dropdown">
@@ -88,6 +92,17 @@
 	</footer>
     
    <script type="text/javascript">
+
+   	function changeacc()
+   	{
+   		var x=document.getElementById("acc");
+   		if(x.innerHTML=="Ethereum")
+   		{	x.innerHTML="Hyperledger";}
+   		else
+   		{
+   			x.innerHTML="Ethereum";
+   		}
+   	}
         document.getElementById("upload").onclick = function() {
             window.open("upload.html","_blank","width=500,height=300");
         }
