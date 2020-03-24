@@ -87,11 +87,19 @@
 	&copy; Created by cybersecurity team
 	</footer>
     
-    <script type="text/javascript">
+   <script type="text/javascript">
         document.getElementById("upload").onclick = function() {
             window.open("upload.html","_blank","width=500,height=300");
         }
-    
+        
+        $(function(){
+$(".text").autocomplete({
+source: ["transaction1","transaction2","transaction3","transaction4",
+        "transaction5","transaction6","transaction7"]
+});
+});
+        
+        
     
     </script>
 </body>
