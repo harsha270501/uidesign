@@ -2,6 +2,29 @@ body{
 
 font-family: Arial, Helvetica, sans-serif;
 }
+.titlebox
+{
+	height:50px;
+}
+h1
+{
+	color:#162955; 
+	text-align:center;
+	padding-bottom: 15px;
+}
+.Acctype
+{
+	width: 100px;
+	height: 35px;
+	background-color: #162955;
+	color:white;
+	display: inline-block;
+	position: absolute;
+	left:1170px; 
+	top:10px;
+}
+
+
 header
 {
 	width: 100%;
