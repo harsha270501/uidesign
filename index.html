@@ -91,6 +91,27 @@ div.dropbtn {
     
 
 }
+        
+#searchBox{
+    float:right;
+    height:50px;
+    width: 400px;
+    padding: 15px 20px 0px 0px;
+    
+    
+}
+        
+.text{
+    float: left;
+    width: 200px;
+    padding: 5px;
+    font-size: 15px;
+    color: black;
+    background: white url(search.png) right center no-repeat;
+    border: 1px solid #B7E953;
+    
+    
+}
 #upload:active{
     box-shadow: 0px 0px;
     top: 4px;
@@ -122,7 +143,16 @@ div.dropbtn {
 	background-color: #072F5F;
 	border-style: "color: #072F5F";
   }
+        #search{
+            display: block;
+        }
+        
+        
 	</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
 </head>
 <body>
 	<h1>PROVENANCE  DATA</h1>
@@ -136,8 +166,16 @@ div.dropbtn {
 			<a href="#">Log Out</a>
 		</div>
 	</div>
+    <div id="searchBox">
+                    <form method="get">
+                        
+                        <input type="text" class="text">
+                        <input type="submit" value="Search a transaction" class="submit">
+                        
+                    </form>
+    </div>
 
-	<i class='fas fa-search' style='font-size: 38px; color:white;position:relative;margin-left:93%'></i>
+	<!--<i class='fas fa-search' style='font-size: 38px; color:white;position:relative;margin-left:93%'></i>-->
 
 		
 
@@ -171,7 +209,15 @@ div.dropbtn {
         document.getElementById("upload").onclick = function() {
             window.open("upload.html","_blank","width=500,height=300");
         }
-    
+        
+        $(function(){
+$(".text").autocomplete({
+source: ["transaction1","transaction2","transaction3","transaction4",
+        "transaction5","transaction6","transaction7"]
+});
+});
+        
+        
     
     </script>
 </body>
