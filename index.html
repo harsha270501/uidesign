@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Provenance data</title>
+	<title>Provenance data management system</title>
 	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 	<link rel="stylesheet" type="text/css" href="basicstyle.css">
 	<link rel="stylesheet" type="text/css" href="menustyle.css">
@@ -16,7 +16,7 @@
 </head>
 <body>
 	<div class="titlebox">
-		<h1>PROVENANCE  DATA</h1>
+		<h1>PROVENANCE  DATA MANAGEMENT SYSTEM</h1>
 		<button class="Acctype" onclick="changeacc()"><div id="acc">Ethereum</div></button>
 	</div>
 <header>
@@ -24,16 +24,15 @@
 	<div class="dropdown">
 		<button class="dropbtn" style="background-color: #072F5F; border-color: #072F5F;"><i class='fas fa-bars' style='font-size:38px;color:white'></i></button>
 			<div class="dropdown-content">
-			<a href="#">Profile</a>
-			<a href="#">Activity</a>
-			<a href="#">Log Out</a>
-		</div>
+			
+			<a href="activity.html">Activity</a>
+			
 	</div>
     <div id="searchBox">
                     <form method="get">
                         
                         <input type="text" class="text">
-                        <input type="submit" value="Search a transaction" class="submit">
+                        
                         
                     </form>
     </div>
@@ -88,7 +87,7 @@
 </div>
 
 <footer>
-	&copy; Created by cybersecurity team
+	&copy; Cyber Security Blockchain team 2020
 	</footer>
     
    <script type="text/javascript">
@@ -98,10 +97,12 @@
    		var x=document.getElementById("acc");
    		if(x.innerHTML=="Ethereum")
    		{	x.innerHTML="Hyperledger";}
-   		else
+   		else if(x.innerHTML=="Hyperledger")
    		{
-   			x.innerHTML="Ethereum";
+   			x.innerHTML="Others";
    		}
+   		else
+   		x.innerHTML="Ethereum";
    	}
         document.getElementById("upload").onclick = function() {
             window.open("upload.html","_blank","width=500,height=300");
@@ -113,9 +114,25 @@ source: ["transaction1","transaction2","transaction3","transaction4",
         "transaction5","transaction6","transaction7"]
 });
 });
+</script>
+
+
+        <script> window.onload = function () { // check to see if user has metamask addon installed on his browser. check to make sure web3 is defined 
+        if (typeof web3 ==='undefined') { 
+        	web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/cbd9dc11b30147e9a2cc974be655ef7c")); 
+       
+        //web3 = new Web3(new web3.currentProvider); 
+    } 
+
+        else { // set the provider you want from Web3.providers 
+        	//web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545")); (
+
+        	console.log("metamask not installed");
+        	} 
+
         
-        
-    
+    }
+
     </script>
 </body>
 </html>
